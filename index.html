@@ -3,104 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D.Halloween Cafe & Restaurant | Anisabad, Patna</title>
+    <title>D. Halloween Cafe & Restaurant | Anisabad</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="fog-container">
-        <div class="fog-img fog-1"></div>
-        <div class="fog-img fog-2"></div>
-    </div>
+    <div class="fog-overlay"></div>
+    <div class="dust-particles"></div>
 
     <nav class="navbar">
-        <div class="logo">D.HALLOWEEN</div>
+        <div class="logo">D. Halloween <span class="skull-icon"></span></div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Our Story</a></li>
+            <li><a href="#about">Story</a></li>
+            <li><a href="#ambience">Ambience</a></li>
             <li><a href="#menu">The Grimoire</a></li>
             <li><a href="#contact">Summon Us</a></li>
         </ul>
+        <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content reveal">
-            <h1>DINE WITH THE DARKNESS</h1>
-            <p>Anisabad's premier destination for hauntingly delicious cuisine.</p>
-            <div class="hero-btns">
+    <header id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="glitch" data-text="D. Halloween Cafe">D. Halloween Cafe</h1>
+            <h2>& Restaurant</h2>
+            <p class="tagline">Enter If You Dare...</p>
+            <div class="cta-group">
                 <a href="#menu" class="btn btn-primary">View Menu</a>
-                <a href="https://wa.me/91XXXXXXXXXX" class="btn btn-secondary">Reserve Table</a>
+                <a href="https://wa.me/919771182468" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Book a Table</a>
+                <a href="#map" class="btn btn-outline">Get Directions</a>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
         </div>
     </header>
 
-    <section id="about" class="section about">
-        <div class="container reveal">
-            <h2>The Legend of D.Halloween</h2>
-            <p>Nestled in the heart of Anisabad, Patna, D.Halloween isn't just a restaurant; it's a sanctuary for those who find beauty in the shadows. Our kitchen blends modern culinary excellence with a gothic atmosphere that stirs the soul.</p>
-        </div>
-    </section>
-
-    <section id="menu" class="section menu">
-        <h2 class="reveal">The Grimoire (Menu)</h2>
-        <div class="menu-grid">
-            <div class="menu-card reveal">
-                <h3>Vampire Bites</h3>
-                <p>Spicy Scarlet Wings • Bloody Beetroot Hummus</p>
-                <span class="price">₹299+</span>
-            </div>
-            <div class="menu-card reveal">
-                <h3>Witch's Brew</h3>
-                <p>Charcoal Lattes • Poison Ivy Mocktails</p>
-                <span class="price">₹199+</span>
-            </div>
-            <div class="menu-card reveal">
-                <h3>Main Rituals</h3>
-                <p>Midnight Pasta • Smoked Ribs from the Abyss</p>
-                <span class="price">₹450+</span>
+    <section id="about" class="reveal">
+        <div class="container">
+            <h2 class="section-title">The Haunting of Anisabad</h2>
+            <div class="story-content">
+                <p>Deep within the shadows of Anisabad, where the streetlights flicker and the air turns cold, lies a sanctuary for the wicked and the hungry. <strong>D. Halloween Cafe</strong> is not merely a restaurant; it is a portal to the netherworld.</p>
+                <p>Born from the ashes of ancient legends, our walls bear the cracks of time, and our decor whispers secrets of the past. Skulls watch you dine, and the candlelight dances to a silent rhythm. We serve culinary dark arts crafted to enchant your soul and satisfy your monstrous appetite.</p>
             </div>
         </div>
     </section>
 
-    <section class="section features">
-        <div class="container reveal">
-            <h2>Why Dine With Us?</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="icon">💀</div>
-                    <h3>Gothic Ambiance</h3>
-                    <p>Sophisticated dark decor for an immersive experience.</p>
+    <section id="ambience" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Spooky Ambience</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519095616597-51d6c8112d7c?q=80&w=600&auto=format&fit=crop" alt="Haunted Interior">
                 </div>
-                <div class="feature-item">
-                    <div class="icon">🔥</div>
-                    <h3>Chef's Ritual</h3>
-                    <p>Hand-crafted recipes using premium local ingredients.</p>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=600&auto=format&fit=crop" alt="Skull Decor">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1545459720-aacaf5090834?q=80&w=600&auto=format&fit=crop" alt="Dark Dining">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1605218427306-635486d34633?q=80&w=600&auto=format&fit=crop" alt="Candle Light">
+                </div>
+            </div>
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+    </section>
+
+    <section id="menu" class="reveal">
+        <div class="container">
+            <h2 class="section-title">The Cursed Menu</h2>
+            
+            <div class="menu-parchment">
+                <div class="menu-category">
+                    <h3><i class="fas fa-skull"></i> Starters From Hell</h3>
+                    <ul class="menu-list">
+                        <li><span>Bloody Wings</span> <span class="dots"></span> <span class="price">249</span></li>
+                        <li><span>Zombie Fingers (Finger Fries)</span> <span class="dots"></span> <span class="price">199</span></li>
+                        <li><span>Devil�s Nachos</span> <span class="dots"></span> <span class="price">229</span></li>
+                        <li><span>Skull Cheese Balls</span> <span class="dots"></span> <span class="price">210</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h3><i class="fas fa-utensils"></i> Wicked Mains</h3>
+                    <ul class="menu-list">
+                        <li><span>Witch�s Special Burger</span> <span class="dots"></span> <span class="price">299</span></li>
+                        <li><span>Haunted Chicken Pasta</span> <span class="dots"></span> <span class="price">349</span></li>
+                        <li><span>Dark Forest Pizza</span> <span class="dots"></span> <span class="price">399</span></li>
+                        <li><span>Ghost Pepper Fried Rice</span> <span class="dots"></span> <span class="price">280</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h3><i class="fas fa-ghost"></i> Deadly Desserts</h3>
+                    <ul class="menu-list">
+                        <li><span>Graveyard Brownie</span> <span class="dots"></span> <span class="price">189</span></li>
+                        <li><span>Bloody Red Velvet Cake</span> <span class="dots"></span> <span class="price">210</span></li>
+                        <li><span>Skull Cupcakes</span> <span class="dots"></span> <span class="price">149</span></li>
+                    </ul>
+                </div>
+
+                <div class="menu-category">
+                    <h3><i class="fas fa-flask"></i> Potions & Brews</h3>
+                    <ul class="menu-list">
+                        <li><span>Poison Apple Mocktail</span> <span class="dots"></span> <span class="price">160</span></li>
+                        <li><span>Green Witch Mojito</span> <span class="dots"></span> <span class="price">170</span></li>
+                        <li><span>Dark Chocolate Shake</span> <span class="dots"></span> <span class="price">190</span></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section contact">
-        <div class="container reveal">
-            <h2>Summon Us</h2>
-            <div class="contact-layout">
-                <div class="contact-info">
-                    <p><strong>Location:</strong> Anisabad, Patna, Bihar</p>
-                    <p><strong>Phone:</strong> +91 98765 43210</p>
-                    <a href="https://wa.me/919876543210" class="btn btn-whatsapp">WhatsApp Now</a>
+    <section id="ratings" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Loved by the Living & Dead</h2>
+            <div class="ratings-grid">
+                <div class="rating-card">
+                    <i class="fab fa-google"></i>
+                    <h4>Google Reviews</h4>
+                    <div class="stars"></div>
+                    <p>4.8/5 Rating</p>
                 </div>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14393.568324424754!2d85.0877994!3d25.5918342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57f000000001%3A0x6b802a8327a3c313!2sAnisabad%2C%20Patna%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="rating-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Zomato_Logo.svg/1024px-Zomato_Logo.svg.png" alt="Zomato" style="filter: invert(1);">
+                    <h4>Zomato</h4>
+                    <div class="stars"></div>
+                    <p>4.5/5 Rating</p>
+                </div>
+                <div class="rating-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Swiggy_logo.svg/1200px-Swiggy_logo.svg.png" alt="Swiggy" style="filter: grayscale(1) invert(1);">
+                    <h4>Swiggy</h4>
+                    <div class="stars"></div>
+                    <p>Top Rated</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="events" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Celebrate With The Spirits</h2>
+            <div class="events-wrapper">
+                <div class="event-item">
+                    <i class="fas fa-birthday-cake glow-icon"></i>
+                    <h3>Birthday Rituals</h3>
+                </div>
+                <div class="event-item">
+                    <i class="fas fa-heart-broken glow-icon"></i>
+                    <h3>Anniversaries</h3>
+                </div>
+                <div class="event-item">
+                    <i class="fas fa-glass-cheers glow-icon"></i>
+                    <h3>Dine-in Events</h3>
+                </div>
+            </div>
+            <div class="event-cta">
+                <a href="https://wa.me/919771182468?text=I%20want%20to%20plan%20a%20spooky%20event!" class="btn btn-primary">Plan Your Event</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Summon Us</h2>
+            <div class="contact-box">
+                <div class="contact-detail">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Cafe Hotline</h3>
+                    <p>+91 97711 82468</p>
+                </div>
+                <div class="contact-detail">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Owner's Line</h3>
+                    <p>7482892029</p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="tel:+919771182468" class="btn btn-outline">Call Now</a>
+                    <a href="https://wa.me/919771182468" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map" class="reveal">
+        <div class="container">
+            <h2 class="section-title">Find Us... If You Can</h2>
+            <p class="address-text">
+                <i class="fas fa-map-marker-alt"></i> Beside S.S. Hospital, Opp. Durga Mandir, Dhira Chak, Anisabad, Patna, Bihar 800002
+            </p>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.056094627982!2d85.111!3d25.594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM1JzM4LjQiTiA4NcKwMDYnMzkuNiJF!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <a href="https://goo.gl/maps/placeholderLink" target="_blank" class="btn btn-primary mt-20">Get Directions</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2023 D.Halloween Cafe & Restaurant. Stay Spooky.</p>
-        <div class="socials">
-            <a href="#">Instagram</a> | <a href="#">Facebook</a>
+        <div class="graveyard-silhouette"></div>
+        <div class="bat bat-1"></div>
+        <div class="bat bat-2"></div>
+        <div class="footer-content">
+            <h3>D. Halloween Cafe & Restaurant</h3>
+            <p>Dare to Dine</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="copyright">� 2025 D. Halloween Cafe & Restaurant. All Rights Haunted.</p>
         </div>
     </footer>
 

@@ -1,35 +1,82 @@
-// Scroll Reveal Animation
-const revealElements = document.querySelectorAll('.reveal');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Scroll Reveal Animation ---
+    const revealElements = document.querySelectorAll('.reveal');
 
-const revealOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            // Stop observing once animation is triggered
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.1 // Trigger when 10% of element is visible
-});
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 150;
 
-revealElements.forEach(el => {
-    revealOnScroll.observe(el);
-});
+        revealElements.forEach((reveal) => {
+            const elementTop = reveal.getBoundingClientRect().top;
+            if (elementTop < windowHeight - elementVisible) {
+                reveal.classList.add('active');
+            }
+        });
+    };
 
-// Smooth Scrolling for Nav Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    window.addEventListener('scroll', revealOnScroll);
+    // Trigger once on load
+    revealOnScroll();
+
+    // --- Mobile Menu Toggle ---
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if(menuBtn) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Change icon
+            const icon = menuBtn.querySelector('i');
+            if(navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+
+    // --- Lightbox Functionality ---
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    galleryItems.forEach(img => {
+        img.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = img.src;
         });
     });
-});
 
-// Subtle Parallax effect for Hero
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    let offset = window.pageYOffset;
-    hero.style.backgroundPositionY = offset * 0.7 + 'px';
+    if(closeLightbox) {
+        closeLightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    }
+
+    // Close lightbox on clicking outside image
+    if(lightbox) {
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    }
+
+    // --- Glitch Text Effect (Optional Randomizer) ---
+    const glitchText = document.querySelector('.glitch');
+    if(glitchText) {
+        setInterval(() => {
+            glitchText.style.textShadow = `
+                ${Math.random() * 5 - 2.5}px ${Math.random() * 5 - 2.5}px 0 #ff0000,
+                ${Math.random() * 5 - 2.5}px ${Math.random() * 5 - 2.5}px 0 #00ff00
+            `;
+            setTimeout(() => {
+                glitchText.style.textShadow = '3px 3px 0 #000';
+            }, 100);
+        }, 3000);
+    }
 });
